@@ -1,0 +1,615 @@
+<?xml version='1.0'?>
+<theFile>
+  <general gamename="Tic-Tac-Toe">
+    <players>
+      <maximum>1</maximum>
+      <minimum>1</minimum>
+    </players>
+    <settings>
+      <setting case="menu">
+        <name>default</name>
+      </setting>
+      <setting case="players">
+        <name>default</name>
+      </setting>
+    </settings>
+  </general>
+  <audio>
+    <menu>
+      <settings name="default">
+        <audio_file case="outro">
+          <path>"tennis/default/menu_sounds/outro.wav"</path>
+        </audio_file>
+        <audio_file case="tutorials">
+          <path>"tennis/default/menu_sounds/tutorials.wav"</path>
+        </audio_file>
+        <audio_file case="new_game">
+          <path>"tennis/default/menu_sounds/new_game.wav"</path>
+        </audio_file>
+        <audio_file case="exit">
+          <path>"tennis/default/menu_sounds/exit.wav"</path>
+        </audio_file>
+        <audio_file case="game_intro">
+          <path>"tennis/default/menu_sounds/game_intro.wav"</path>
+        </audio_file>
+        <audio_file case="voice_selection">
+          <path>"tennis/default/menu_sounds/voice_selection.wav"</path>
+        </audio_file>
+		    <audio_file case="tutorial_intro">
+          <path>"tennis/default/menu_sounds/tutorial_intro.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_01">
+          <path>"tennis/default/menu_sounds/tutorial_01.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_02">
+          <path>"tennis/default/menu_sounds/tutorial_02.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_03">
+          <path>"tennis/default/menu_sounds/tutorial_03.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_04">
+          <path>"tennis/default/menu_sounds/tutorial_04.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_05">
+          <path>"tennis/default/menu_sounds/tutorial_05.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_06">
+          <path>"tennis/default/menu_sounds/tutorial_06.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_55">
+          <path>"tennis/default/menu_sounds/tutorial_55.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_66">
+          <path>"tennis/default/menu_sounds/tutorial_66.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_outro">
+          <path>"tennis/default/menu_sounds/tutorial_outro.wav"</path>
+        </audio_file>
+		    <audio_file case="new_game_intro">
+          <path>"tennis/default/menu_sounds/new_game_intro.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_stage_1">
+          <path>"tennis/default/menu_sounds/new_game_stage_1.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_stage_2">
+          <path>"tennis/default/menu_sounds/new_game_stage_2.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_stage_3">
+          <path>"tennis/default/menu_sounds/new_game_stage_3.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_stage_4">
+          <path>"tennis/default/menu_sounds/new_game_stage_4.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_extra_life">
+          <path>"tennis/default/menu_sounds/new_game_extra_life.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_1">
+          <path>"tennis/default/menu_sounds/new_game_life_1.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_2">
+          <path>"tennis/default/menu_sounds/new_game_life_2.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_3">
+          <path>"tennis/default/menu_sounds/new_game_life_3.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_4">
+          <path>"tennis/default/menu_sounds/new_game_life_4.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_5">
+          <path>"tennis/default/menu_sounds/new_game_life_5.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_6">
+          <path>"tennis/default/menu_sounds/new_game_life_6.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_7">
+          <path>"tennis/default/menu_sounds/new_game_life_7.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_1">
+          <path>"tennis/default/menu_sounds/new_game_prize_1.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_2">
+          <path>"tennis/default/menu_sounds/new_game_prize_2.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_3">
+          <path>"tennis/default/menu_sounds/new_game_prize_3.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_4">
+          <path>"tennis/default/menu_sounds/new_game_prize_4.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_5">
+          <path>"tennis/default/menu_sounds/new_game_prize_5.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_6">
+          <path>"tennis/default/menu_sounds/new_game_prize_6.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_7">
+          <path>"tennis/default/menu_sounds/new_game_prize_7.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_8">
+          <path>"tennis/default/menu_sounds/new_game_prize_8.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_9">
+          <path>"tennis/default/menu_sounds/new_game_prize_9.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_10">
+          <path>"tennis/default/menu_sounds/new_game_prize_10.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_11">
+          <path>"tennis/default/menu_sounds/new_game_prize_11.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_12">
+          <path>"tennis/default/menu_sounds/new_game_prize_12.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_13">
+          <path>"tennis/default/menu_sounds/new_game_prize_13.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_14">
+          <path>"tennis/default/menu_sounds/new_game_prize_14.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_15">
+          <path>"tennis/default/menu_sounds/new_game_prize_15.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_16">
+          <path>"tennis/default/menu_sounds/new_game_prize_16.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_17">
+          <path>"tennis/default/menu_sounds/new_game_prize_17.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_18">
+          <path>"tennis/default/menu_sounds/new_game_prize_18.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_19">
+          <path>"tennis/default/menu_sounds/new_game_prize_19.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_20">
+          <path>"tennis/default/menu_sounds/new_game_prize_20.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_start">
+          <path>"tennis/default/menu_sounds/new_game_outro_start.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_a">
+          <path>"tennis/default/menu_sounds/new_game_outro_pre.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_c">
+          <path>"tennis/default/menu_sounds/new_game_outro_post.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b1">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_1.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b2">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_2.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b3">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_3.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b4">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_4.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b5">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_5.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b6">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_6.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b7">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_7.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b8">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_8.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b9">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_9.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b10">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_10.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b11">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_11.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b12">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_12.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b13">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_13.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b14">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_14.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b15">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_15.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b16">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_16.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b17">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_17.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b18">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_18.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b19">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_19.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b20">
+          <path>"tennis/default/menu_sounds/new_game_outro_mid_20.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_miss">
+          <path>"tennis/default/menu_sounds/new_game_miss.wav"</path>
+        </audio_file>
+      </settings>
+      <settings name="electra">
+        <audio_file case="outro">
+          <path>"tennis/electra/menu_sounds/outro.wav"</path>
+        </audio_file>
+        <audio_file case="tutorials">
+          <path>"tennis/electra/menu_sounds/tutorials.wav"</path>
+        </audio_file>
+        <audio_file case="new_game">
+          <path>"tennis/electra/menu_sounds/new_game.wav"</path>
+        </audio_file>
+        <audio_file case="exit">
+          <path>"tennis/electra/menu_sounds/exit.wav"</path>
+        </audio_file>
+        <audio_file case="game_intro">
+          <path>"tennis/electra/menu_sounds/game_intro.wav"</path>
+        </audio_file>
+        <audio_file case="voice_selection">
+          <path>"tennis/electra/menu_sounds/voice_selection.wav"</path>
+        </audio_file>
+		    <audio_file case="tutorial_intro">
+          <path>"tennis/electra/menu_sounds/tutorial_intro.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_01">
+          <path>"tennis/electra/menu_sounds/tutorial_01.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_02">
+          <path>"tennis/electra/menu_sounds/tutorial_02.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_03">
+          <path>"tennis/electra/menu_sounds/tutorial_03.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_04">
+          <path>"tennis/electra/menu_sounds/tutorial_04.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_05">
+          <path>"tennis/electra/menu_sounds/tutorial_05.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_06">
+          <path>"tennis/electra/menu_sounds/tutorial_06.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_55">
+          <path>"tennis/electra/menu_sounds/tutorial_55.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_66">
+          <path>"tennis/electra/menu_sounds/tutorial_66.wav"</path>
+        </audio_file>
+        <audio_file case="tutorial_outro">
+          <path>"tennis/electra/menu_sounds/tutorial_outro.wav"</path>
+        </audio_file>
+		    <audio_file case="new_game_intro">
+          <path>"tennis/electra/menu_sounds/new_game_intro.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_stage_1">
+          <path>"tennis/electra/menu_sounds/new_game_stage_1.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_stage_2">
+          <path>"tennis/electra/menu_sounds/new_game_stage_2.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_stage_3">
+          <path>"tennis/electra/menu_sounds/new_game_stage_3.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_stage_4">
+          <path>"tennis/electra/menu_sounds/new_game_stage_4.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_extra_life">
+          <path>"tennis/electra/menu_sounds/new_game_extra_life.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_1">
+          <path>"tennis/electra/menu_sounds/new_game_life_1.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_2">
+          <path>"tennis/electra/menu_sounds/new_game_life_2.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_3">
+          <path>"tennis/electra/menu_sounds/new_game_life_3.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_4">
+          <path>"tennis/electra/menu_sounds/new_game_life_4.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_5">
+          <path>"tennis/electra/menu_sounds/new_game_life_5.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_6">
+          <path>"tennis/electra/menu_sounds/new_game_life_6.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_lives_left_7">
+          <path>"tennis/electra/menu_sounds/new_game_life_7.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_1">
+          <path>"tennis/electra/menu_sounds/new_game_prize_1.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_2">
+          <path>"tennis/electra/menu_sounds/new_game_prize_2.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_3">
+          <path>"tennis/electra/menu_sounds/new_game_prize_3.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_4">
+          <path>"tennis/electra/menu_sounds/new_game_prize_4.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_5">
+          <path>"tennis/electra/menu_sounds/new_game_prize_5.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_6">
+          <path>"tennis/electra/menu_sounds/new_game_prize_6.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_7">
+          <path>"tennis/electra/menu_sounds/new_game_prize_7.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_8">
+          <path>"tennis/electra/menu_sounds/new_game_prize_8.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_9">
+          <path>"tennis/electra/menu_sounds/new_game_prize_9.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_10">
+          <path>"tennis/electra/menu_sounds/new_game_prize_10.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_11">
+          <path>"tennis/electra/menu_sounds/new_game_prize_11.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_12">
+          <path>"tennis/electra/menu_sounds/new_game_prize_12.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_13">
+          <path>"tennis/electra/menu_sounds/new_game_prize_13.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_14">
+          <path>"tennis/electra/menu_sounds/new_game_prize_14.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_15">
+          <path>"tennis/electra/menu_sounds/new_game_prize_15.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_16">
+          <path>"tennis/electra/menu_sounds/new_game_prize_16.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_17">
+          <path>"tennis/electra/menu_sounds/new_game_prize_17.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_18">
+          <path>"tennis/electra/menu_sounds/new_game_prize_18.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_19">
+          <path>"tennis/electra/menu_sounds/new_game_prize_19.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_prize_20">
+          <path>"tennis/electra/menu_sounds/new_game_prize_20.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_start">
+          <path>"tennis/electra/menu_sounds/new_game_outro_start.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_a">
+          <path>"tennis/electra/menu_sounds/new_game_outro_pre.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_c">
+          <path>"tennis/electra/menu_sounds/new_game_outro_post.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b1">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_1.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b2">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_2.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b3">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_3.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b4">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_4.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b5">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_5.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b6">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_6.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b7">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_7.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b8">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_8.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b9">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_9.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b10">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_10.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b11">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_11.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b12">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_12.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b13">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_13.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b14">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_14.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b15">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_15.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b16">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_16.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b17">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_17.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b18">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_18.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b19">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_19.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_outro_b20">
+          <path>"tennis/electra/menu_sounds/new_game_outro_mid_20.wav"</path>
+        </audio_file>
+        <audio_file case="new_game_miss">
+          <path>"tennis/electra/menu_sounds/new_game_miss.wav"</path>
+        </audio_file>
+      </settings>
+    </menu>
+	<player index="1">
+      <settings name="default">
+        <audio_file case="player_racket_hit">
+          <path>"tennis/default/player1/hit_1.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="opponent_racket_hit">
+          <path>"tennis/default/player1/hit_2.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="floor_hit">
+          <path>"tennis/default/player1/bounce.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="net_pass">
+          <path>"tennis/default/player1/air.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="lose">
+          <path>"tennis/default/player1/lose.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="lose_life">
+          <path>"tennis/default/player1/ball.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="level_up">
+          <path>"tennis/default/player1/level.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="extra_life">
+          <path>"tennis/default/player1/life.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="boundary">
+          <path>"tennis/default/player1/b_right.wav"</path>
+          <position_vals>1=0=0</position_vals>
+        </audio_file>
+        <audio_file case="boundary">
+          <path>"tennis/default/player1/b_left.wav"</path>
+          <position_vals>-1=0=0</position_vals>
+        </audio_file>
+        <audio_file case="boundary">
+          <path>"tennis/default/player1/b_up.wav"</path>
+          <position_vals>0=1=0</position_vals>
+        </audio_file>
+        <audio_file case="boundary">
+          <path>"tennis/default/player1/b_down.wav"</path>
+          <position_vals>0=-1=0</position_vals>
+        </audio_file>
+        <audio_file case="just moved">
+          <path>"tennis/default/player1/jm_right.wav"</path>
+          <position_vals>1=0=0</position_vals>
+        </audio_file>
+        <audio_file case="just moved">
+          <path>"tennis/default/player1/jm_left.wav"</path>
+          <position_vals>-1=0=0</position_vals>
+        </audio_file>
+        <audio_file case="just moved">
+          <path>"tennis/default/player1/jm_center.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="claps_1">
+          <path>"tennis/default/player1/claps_1.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="claps_2">
+          <path>"tennis/default/player1/claps_2.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_1">
+          <path>"tennis/default/player1/win_1.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_2">
+          <path>"tennis/default/player1/win_2.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_3">
+          <path>"tennis/default/player1/win_3.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_4">
+          <path>"tennis/default/player1/win_4.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_5">
+          <path>"tennis/default/player1/win_5.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_6">
+          <path>"tennis/default/player1/win_6.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_7">
+          <path>"tennis/default/player1/win_7.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_8">
+          <path>"tennis/default/player1/win_8.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_9">
+          <path>"tennis/default/player1/win_9.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_10">
+          <path>"tennis/default/player1/win_10.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_11">
+          <path>"tennis/default/player1/win_11.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="win_12">
+          <path>"tennis/default/player1/win_12.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="thodoris_1">
+          <path>"tennis/default/player1/thodoris_1.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="thodoris_2">
+          <path>"tennis/default/player1/thodoris_2.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="thodoris_3">
+          <path>"tennis/default/player1/thodoris_3.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="thodoris_4">
+          <path>"tennis/default/player1/thodoris_4.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="electra_1">
+          <path>"tennis/default/player1/electra_1.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="electra_2">
+          <path>"tennis/default/player1/electra_2.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="electra_3">
+          <path>"tennis/default/player1/electra_3.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+        <audio_file case="electra_4">
+          <path>"tennis/default/player1/electra_4.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
+      </settings>
+    </player>
+  </audio>
+</theFile>
