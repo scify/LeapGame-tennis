@@ -17,7 +17,7 @@ Current version is 1.1
 
 ## Extra Soundsets
 ------------------
-Under the folder "Extra Soundsets" you will find two female voice soundsets, one in Greek and one in English. You will also find the source code for a soundset manager specifically for leap games. Under the "compiled" folder you can also find compiled versions of the soundset manager for your convenience.
+Under the folder "Extra Soundsets" you will find two female voice soundsets, one in Greek and one in English. You can add your own soundsets and allow people from all over the world to enjoy this game in their own language! In this folder you will also find the source code for a soundset manager created specifically to help you create soundsets for the leap tennis game. Under the "compiled" folder you can also find compiled versions of the soundset manager for your convenience.
 
 ## Extra Soundsets Folder Structure
 -----------------------------------
