@@ -121,13 +121,12 @@ public class TennisGameEngineInitiator : MonoBehaviour {
 					state.timestamp = 10;
 					return false;
 				}
-				if (state.level == Settings.levels_max) {
-					state.timestamp = 10;
+                if (state.level > Settings.levels_max) {
 					environment.Remove(ball);
                     state.blockingSound = new TennisSoundObject("Prefabs/Tennis/GameAudio", auEngine.getSoundForMenu("new_game_outro_a"));
 					engine.state.environment.Add(state.blockingSound);
 					state.speed = 0f;
-					state.timestamp = 15;
+					state.timestamp = 17;
 					return false;
 				}
 				if (state.extra_life) {

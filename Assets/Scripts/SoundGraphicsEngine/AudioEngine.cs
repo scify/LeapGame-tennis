@@ -216,8 +216,11 @@ public class AudioEngine {
 			if (this.currentPlayer == -1) throw new KeyNotFoundException ("Player: " + player + " not found!");
 			player = this.currentPlayer;
 		}
-		return (AudioClip) Resources.Load(this.audioFilesSettings.getSoundForPlayer (
-            player, theCase, soundOrigin).Replace(".wav", ""), typeof(AudioClip));
+        string path = this.audioFilesSettings.getSoundForPlayer(player, theCase, soundOrigin);
+        if (!path.StartsWith("Sounds")) {
+            return Settings.audioClips[path];
+        }
+        return (AudioClip)Resources.Load(path.Replace(".wav", ""), typeof(AudioClip));
 	}
 
 
@@ -235,9 +238,12 @@ public class AudioEngine {
 	 * @return AudioClip - the AudioClip object containing the sound
 	 * @author Konstantinos Drossos
 	 */
-	public AudioClip getSoundForMenu(string theCase) {
-		return (AudioClip) Resources.Load(this.audioFilesSettings.getSoundForMenu(theCase).Replace(".wav", ""), 
-		                                  	typeof(AudioClip));
+    public AudioClip getSoundForMenu(string theCase) {
+        string path = this.audioFilesSettings.getSoundForMenu(theCase);
+        if (!path.StartsWith("Sounds")) {
+            return Settings.audioClips[path];
+        }
+		return (AudioClip) Resources.Load(path.Replace(".wav", ""), typeof(AudioClip));
 	}
 
 

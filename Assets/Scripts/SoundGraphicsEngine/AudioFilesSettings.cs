@@ -81,11 +81,7 @@ public class AudioFilesSettings {
 	 */
 	public AudioFilesSettings(string gameName, string playerSetting, string menuSetting) {
 
-		AudioXMLDocument gameSettings = new AudioXMLDocument() ;
-
-		try { 
-			gameSettings.LoadSettingsXML(gameName); 
-		} catch (Exception e) { Debug.Log (e.Message); throw e; }
+		AudioSettingsDocument gameSettings = Settings.audio_settings_document;
 
 		this.initialiseLists ();
 
@@ -174,9 +170,7 @@ public class AudioFilesSettings {
 	 * @author Konstantinos Drossos
 	 */
 	public void changeSettingsForPlayer(int playerIndex, string newSettings) {
-
-		AudioXMLDocument gameSettings = new AudioXMLDocument() ;
-		gameSettings.LoadSettingsXML (this.gameName);
+        AudioSettingsDocument gameSettings = Settings.audio_settings_document;
 
 		this.audioFilesForPlayer [playerIndex].Clear ();
 		this.audioFilesForPlayer [playerIndex] = gameSettings.getFilesForPlayer (playerIndex, newSettings);
@@ -195,8 +189,7 @@ public class AudioFilesSettings {
 	 * @author Konstantinos Drossos
 	 */
 	public void changeSettingsForMenu (string newSettings) {
-		AudioXMLDocument gameSettings = new AudioXMLDocument() ;
-		gameSettings.LoadSettingsXML (this.gameName);
+        AudioSettingsDocument gameSettings = Settings.audio_settings_document;
 
 		this.audioFilesForMenu = gameSettings.getFilesForMenu(newSettings);
 		this.currentAudioSettingForMenu = newSettings;
