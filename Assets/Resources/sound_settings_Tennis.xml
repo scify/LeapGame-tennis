@@ -308,6 +308,10 @@
           <path>"tennis/default/player1/claps_2.wav"</path>
           <position_vals>0=0=0</position_vals>
         </audio_file>
+        <audio_file case="emptyFile">
+          <path>"tennis/default/player1/emptyFile.wav"</path>
+          <position_vals>0=0=0</position_vals>
+        </audio_file>
         <audio_file case="win_1">
           <path>"tennis/default/player1/win_11.wav"</path>
           <position_vals>0=0=0</position_vals>
