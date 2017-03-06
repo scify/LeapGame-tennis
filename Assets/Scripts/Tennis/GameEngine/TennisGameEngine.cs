@@ -85,6 +85,7 @@ public class TennisGameEngine : GameEngine {
     }
 
     public override void cleanUp() {
+    // TODO: Check whether we do have a previousMenu variable set.
         Application.LoadLevel(Settings.previousMenu);
 	}
 

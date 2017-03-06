@@ -130,7 +130,7 @@ public class TennisLoadingInitiator : MonoBehaviour {
         }
         WWW www = new WWW(url);
         yield return www;
-        Settings.audioClips[path] = www.audioClip;
+        Settings.audioClips[path] = www.GetAudioClip();
         done++;
     }
 

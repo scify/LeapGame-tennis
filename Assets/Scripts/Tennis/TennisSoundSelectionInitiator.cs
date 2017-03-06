@@ -31,12 +31,13 @@ public class TennisSoundSelectionInitiator : MonoBehaviour {
 		environment.Add(new TennisStaticObject("Prefabs/Tennis/Light_Default", new Vector3(0, 10, 0), false));
         environment.Add(new CanvasObject("Prefabs/Tennis/Logos", true, new Vector3(10000, 0, 0), false));
         int i = 0;
-        environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonSelected", Settings.default_soundset, "default", "default_", null, new Vector3(0, 0, -offset_y), false, true));
+
         foreach (string s in auEngine.getSettingsAudioForMenu()) {
-            if (s == "default") {
-                continue;
+            if (s == Settings.default_soundset) {
+                environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonSelected", Settings.default_soundset_btn_name, s, s + "_", null, new Vector3(0, 0, -offset_y), false, true));
+            } else {
+                //environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonDefault", s, s, s + "_", null, new Vector3(0, 0, i++ * offset_y), false, false));
             }
-            environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonDefault", s, s, s + "_", null, new Vector3(0, 0, i++ * offset_y), false, false));
         }
 
         TennisRuleset rules = new TennisRuleset();

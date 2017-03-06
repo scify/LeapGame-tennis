@@ -16,6 +16,7 @@
  */
 using UnityEngine;
 using System.Collections.Generic;
+using SmartLocalization;
 
 public class TennisMainMenuInitiator : MonoBehaviour {
 
@@ -30,9 +31,13 @@ public class TennisMainMenuInitiator : MonoBehaviour {
         environment.Add(new TennisStaticObject("Prefabs/Tennis/Camera_Default", new Vector3(0, 10, 0), false));
 		environment.Add(new TennisStaticObject("Prefabs/Tennis/Light_Default", new Vector3(0, 10, 0), false));
 		environment.Add(new CanvasObject("Prefabs/Tennis/Logos", true, new Vector3(10000, 0, 0), false));
-        environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonSelected", "Οδηγίες", "tutorial", "tutorials", auEngine.getSoundForMenu("tutorials"), new Vector3(0, 0, -offset_y), false, true));
-        environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonDefault", "Νέο Παιχνίδι", "newGame", "new_game", auEngine.getSoundForMenu("new_game"), new Vector3(0, 0, 0), false));        
-        environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonDefault", "Έξοδος", "exitScene", "exit", auEngine.getSoundForMenu("exit"), new Vector3(0, 0, offset_y), false));
+
+        LanguageManager languageManager = LanguageManager.Instance;
+        languageManager.ChangeLanguage(Settings.default_lang);
+
+        environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonSelected", languageManager.GetTextValue("SmartLocalization.Instructions"), "tutorial", "tutorials", auEngine.getSoundForMenu("tutorials"), new Vector3(0, 0, -offset_y), false, true));
+        environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonDefault", languageManager.GetTextValue("SmartLocalization.NewGame"), "newGame", "new_game", auEngine.getSoundForMenu("new_game"), new Vector3(0, 0, 0), false));
+        environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonDefault", languageManager.GetTextValue("SmartLocalization.Exit"), "exitScene", "exit", auEngine.getSoundForMenu("exit"), new Vector3(0, 0, offset_y), false));
 
         TennisRuleset rules = new TennisRuleset();
         rules.Add(new TennisRule("initialization", (TennisMenuState state, GameEvent eve, TennisMenuEngine engine) => {

@@ -45,6 +45,7 @@ public class TennisTutorialInitiator : MonoBehaviour {
 		players.Add(new Player("player0", "player0"));
 		
 		TennisRuleset rules = new TennisRuleset();
+		// Add intro sound and prepare it for rendering
 		rules.Add(new TennisRule("initialization", (TennisGameState state, GameEvent eve, TennisGameEngine engine) => {
 			AudioClip auClip = auEngine.getSoundForMenu("tutorial_intro");
 			TennisSoundObject tso = new TennisSoundObject("Prefabs/Tennis/AudioSource", auClip);
@@ -55,10 +56,11 @@ public class TennisTutorialInitiator : MonoBehaviour {
             state.target = 0;
 			return false;
 		}));
-		
+
 		rules.Add(new TennisRule("action", (TennisGameState state, GameEvent eve, TennisGameEngine engine) => {
 			if (eve.payload.Equals("any")) {
 				switch(state.timestamp) {
+        		// In the beginning (timestamp=0), play the tutorial info
 				case 0:
 					AudioClip auClip = auEngine.getSoundForMenu("tutorial_01");
 					TennisSoundObject tso = new TennisSoundObject("Prefabs/Tennis/AudioSource", auClip);
@@ -67,6 +69,7 @@ public class TennisTutorialInitiator : MonoBehaviour {
 					state.timestamp++;
 					return false;
 				case 10:
+				    // Indicate the we reached the end of the game
 					(state.result as TennisGameResult).status = TennisGameResult.GameStatus.Over;
 					return false;
 				default:
@@ -76,6 +79,7 @@ public class TennisTutorialInitiator : MonoBehaviour {
 			return true;
         }));
 
+        // Support ESC key press to return to main menu
         rules.Add(new TennisRule("action", (TennisGameState state, GameEvent eve, TennisGameEngine engine) => {
             if (eve.payload.Equals("escape")) {
                 Application.LoadLevel("mainMenu");
@@ -83,12 +87,17 @@ public class TennisTutorialInitiator : MonoBehaviour {
             }
             return true;
         }));
-		
+
+		// Add rule for events, AFTER a sound playing is complete
 		rules.Add(new TennisRule("soundOver", (TennisGameState state, GameEvent eve, TennisGameEngine engine) => {
 			int id = int.Parse(eve.payload);
+			// If a blocking sound is running
 			if (state.blockingSound != null && id == state.blockingSound.clip.GetInstanceID()) {
 				state.environment.Remove(state.blockingSound);
 				state.blockingSound = null;
+
+				// All the fixed numbers below indicate state numbers in a state machine, built around the
+				// sounds (that follow a scenario).
 				switch(state.timestamp) {
 				case -1:
 					state.timestamp++;
@@ -110,12 +119,12 @@ public class TennisTutorialInitiator : MonoBehaviour {
                 case 76:
                     state.timestamp++;
                     break;
-                case 6:
+                case 6: // This is the base tutorial state
                     state.blockingSound = new TennisSoundObject("Prefabs/Tennis/AudioSource", auEngine.getSoundForMenu("tutorial_0" + state.timestamp));
                     state.environment.Add(state.blockingSound);
                     state.timestamp = 76;
                     break;
-				case 7:
+				case 7: // This is the final message, before leaving the tutorial
 					TennisSoundObject stso = new TennisSoundObject("Prefabs/Tennis/AudioSource", auEngine.getSoundForMenu("tutorial_outro"));
 					state.environment.Add(stso);
 					state.blockingSound = stso;
@@ -129,8 +138,9 @@ public class TennisTutorialInitiator : MonoBehaviour {
 					state.speed = 1f;
 					break;
 				}
-			} else {
+			} else { // if no blocking sound is running
 				WorldObject toRemove = null;
+				// Find and remove/stop the current sound
 				foreach (WorldObject go in state.environment) {
 					if (go is TennisSoundObject && (go as TennisSoundObject).clip.GetInstanceID() == id) {
 						toRemove = go;
@@ -144,6 +154,7 @@ public class TennisTutorialInitiator : MonoBehaviour {
 			return false;
 		}));
 
+        // Add a rule to support pausing the game
 		rules.Add(new TennisRule("action", (TennisGameState state, GameEvent eve, TennisGameEngine engine) => {
 			if (eve.payload.Equals("pause") && state.blockingSound != null) {
 				state.blockingSound.hidden = true;
@@ -153,22 +164,29 @@ public class TennisTutorialInitiator : MonoBehaviour {
 		}));
 
 		rules.Add(new TennisRule("action", (TennisGameState state, GameEvent eve, TennisGameEngine engine) => {
+            // If ENTER key is received while the player is playing
 			if (eve.payload.Equals("enter") && state.timestamp > 10 && state.blockingSound == null && state.timestamp < 66) {
+			    // Get the sound for the corresponding base state (base states are from 1 to 5)
 				state.timestamp /= 11;
 				TennisSoundObject ltso = new TennisSoundObject("Prefabs/Tennis/AudioSource", auEngine.getSoundForMenu("tutorial_0" + state.timestamp));
+				// Play the sound
 				state.environment.Add(ltso);
 				state.blockingSound = ltso;
 				state.target = state.timestamp == 4 ? -1 : 0;
+				// Go back to running the game
 				state.timestamp = (state.timestamp + 1) * 11;
 				return false;
 			}
 			return true;
 		}));
-		
+
+		// Add a rule separating player from game events
 		rules.Add(new TennisRule("ALL", (TennisGameState state, GameEvent eve, TennisGameEngine engine) => {
 			return !eve.initiator.StartsWith("player") || (eve.initiator.Equals("player" + state.curPlayer) && state.blockingSound == null);
 		}));
 
+
+        // Everything related to ball and player positions
         rules.Add(new TennisRule("position", (TennisGameState state, GameEvent eve, TennisGameEngine engine) => {
             if (state.timestamp < 67) {
                 return false;
@@ -176,8 +194,10 @@ public class TennisTutorialInitiator : MonoBehaviour {
             if (state.speed == 0f || !positionalMovement) {
                 return false;
             }
+
+            // Add reactions (sound) for pressing left and right buttons, on request
             switch (state.timestamp) {
-                case 67:
+                case 67://explain that we need keep the right key pressed
                     if (!eve.payload.Equals("right")) {
                         state.timestamp = 66;
                         actors.Clear();
@@ -187,7 +207,7 @@ public class TennisTutorialInitiator : MonoBehaviour {
                         state.speed = 0;
                     }
                     break;
-                case 78:
+                case 78:  //explain that we need keep the left key pressed
                     if (!eve.payload.Equals("left")) {
                         state.timestamp = 77;
                         actors.Clear();
@@ -213,17 +233,22 @@ public class TennisTutorialInitiator : MonoBehaviour {
                     dx = 1;
                     break;
             }
+
+            // For all actors
             foreach (Actor actor in state.actors) {
                 Vector3 newPos = new Vector3(offset_x * dx, actor.position.y, actor.position.z);
                 if (actor.position == newPos) {
                     return false;
                 }
+                // If the actor moved
                 actor.position = newPos;
+                // play the corresponding sound
                 engine.state.environment.Add(new TennisSoundObject("Prefabs/Tennis/GameAudio", auEngine.getSoundForPlayer("just moved", new Vector3(dx, 0, 0)), actor.position));
             }
             return false;
         }));
-		
+
+		// Support moves beyond tutorial script events
 		rules.Add(new TennisRule("move", (TennisGameState state, GameEvent eve, TennisGameEngine engine) => {
 			switch (state.timestamp) {
 			case 44:
@@ -241,7 +266,7 @@ public class TennisTutorialInitiator : MonoBehaviour {
 				if (eve.payload.Equals("right")) {
 					state.target = 1;
 					state.speed = 1f;
-                    state.timestamp = 67;
+                    state.timestamp = 67; // Go to sound explaining that we need keep the right key pressed
 				}
                 break;
             case 77:
@@ -249,7 +274,7 @@ public class TennisTutorialInitiator : MonoBehaviour {
                 if (eve.payload.Equals("left")) {
                     state.target = -1;
                     state.speed = 1f;
-                    state.timestamp = 78;
+                    state.timestamp = 78;  // Go to sound explaining that we need keep the left key pressed
                 }
                 break;
 			default:
@@ -310,7 +335,9 @@ public class TennisTutorialInitiator : MonoBehaviour {
 				ball = new TennisMovingObject("Prefabs/Tennis/Ball", new Vector3(0, -1, Settings.size_mod_z * 5.9f), true);
 				environment.Add(ball);
 				state.speed = 0f;
+				// If we are within a base state
 				if (state.timestamp < 10) {
+				    // Play the corresponding tutorial sound
 					TennisSoundObject rtso = new TennisSoundObject("Prefabs/Tennis/AudioSource", auEngine.getSoundForMenu("tutorial_0" + state.timestamp));
 					state.environment.Add(rtso);
 					state.blockingSound = rtso;
