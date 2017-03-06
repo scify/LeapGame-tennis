@@ -293,7 +293,11 @@ public class TennisGameEngineInitiator : MonoBehaviour {
                     }
                     state.timestamp = 12;
                     engine.state.environment.Add(new TennisSoundObject("Prefabs/Tennis/GameAudio", auEngine.getSoundForPlayer("claps_" + (state.level % 2 + 1)), position));
-                    auClip = auEngine.getSoundForPlayer("win_" + Random.Range(1, 13));
+                    //play clip saying that the opponent (computer) lost.
+                    //for now we are skipping this step.
+                    //auClip = auEngine.getSoundForPlayer("win_" + Random.Range(1, 13));
+                    //skipping this step by playing an empty sound file.
+                    auClip = auEngine.getSoundForPlayer("emptyFile");
                     environment.Remove(ball);
                     ball = new TennisMovingObject("Prefabs/Tennis/Ball", new Vector3(0, -2, Settings.size_mod_z * 5.9f), false);
                     environment.Add(ball);

@@ -315,7 +315,11 @@ public class TennisTutorialInitiator : MonoBehaviour {
                     if (state.timestamp == 68) {
                         state.blockingSound = new TennisSoundObject("Prefabs/Tennis/AudioSource", auEngine.getSoundForPlayer("opponent_racket_hit"));
                     } else {
-                        state.blockingSound = new TennisSoundObject("Prefabs/Tennis/AudioSource", auEngine.getSoundForPlayer("win_" + Random.Range(1, 13)));
+                        //play clip saying that the opponent (computer) lost.
+	                    //for now we are skipping this step.
+	                    //auClip = auEngine.getSoundForPlayer("win_" + Random.Range(1, 13));
+	                    //skipping this step by playing an empty sound file.
+	                    auClip = auEngine.getSoundForPlayer("emptyFile");
                     }
                     environment.Add(state.blockingSound);
                     state.timestamp = (state.timestamp - 2) / 11;

@@ -40,7 +40,7 @@ public class Settings {
     public static string menu_sounds = "English";
     public static string previousMenu = "mainMenu";
     //this variable defines how the default soundset directory name.
-    public static string default_soundset = "default";
+    public static string default_soundset = "English";
     //how the default soundset btn will be named (in soundset selection screen)
     public static string default_soundset_btn_name = "English";
     //default lang has nothing to do with sound packs. It refers only to the smart localization plugin, for localized strings.
