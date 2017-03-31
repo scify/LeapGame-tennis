@@ -39,6 +39,8 @@ public class TennisSoundSelectionInitiator : MonoBehaviour {
                 //environment.Add(new TennisMenuItem("Prefabs/Tennis/ButtonDefault", s, s, s + "_", null, new Vector3(0, 0, i++ * offset_y), false, false));
             }
         }
+        //Load main menu screen, not sound selection screen
+        Application.LoadLevel("mainMenu");
 
         TennisRuleset rules = new TennisRuleset();
         rules.Add(new TennisRule("initialization", (TennisMenuState state, GameEvent eve, TennisMenuEngine engine) => {
